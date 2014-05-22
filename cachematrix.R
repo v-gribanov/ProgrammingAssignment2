@@ -1,9 +1,9 @@
 # Below there are 2 functions that implement the calculation of   
-# inverse matrix. For big matrix the computation of
-#its inverse one is time-consuming operation. 
-#The idea is to cache the inverse matrix so that when 
-#we need it again, it can be looked up in the cache 
-#rather than recomputed
+# inverse matrix. For large matrix the computation of
+# its inverse one is time-consuming operation. 
+# The idea is to cache the inverse matrix so that when 
+# we need it again, it can be looked up in the cache 
+# rather than recomputed
 
 
 
@@ -29,8 +29,13 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
 
+# The function return the inverse matrix for given matrix.
+# It first checks to see if the inverse matrix
+# has already been calculated. If so, it gets the inverse matrix
+# from the cache and skips the computation. Otherwise, 
+# it calculates the inverse matrix and sets the value 
+# of the inverse matrix in the cache via the setinverse function.
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
   inv <- x$getinverse()
